@@ -26,8 +26,7 @@ void enque(Queue* q, int ele){
         printf("Queue is full\n");
         return;
     }
-    q->item[q->rear] = ele;
-    q->rear++;
+    q->item[q->rear++] = ele;
 }
 
 void dequeue(Queue* q){
@@ -71,5 +70,11 @@ int main(){
     enque(&q, 20);
     enque(&q, 30);
     enque(&q, 40);
+    displayQueue(&q);
+    dequeue(&q);
+    displayQueue(&q);
+    dequeue(&q);
+    displayQueue(&q);
+    dequeue(&q);
     displayQueue(&q);
 }
